@@ -1,6 +1,6 @@
 import type { ManagerKey } from "./fpl-types";
 
 export const MANAGER_COLOR: Record<ManagerKey, string> = {
-  mike: "#3b82f6", // blue-500
-  jack: "#f97316", // orange-500
+  mike: "#D4907A", // apricot — raganwolfe.com brand accent
+  jack: "#B8B8B8", // light grey — the site's secondary text color
 };

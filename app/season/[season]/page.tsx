@@ -51,14 +51,16 @@ export default async function SeasonPage({
     <main className="mx-auto max-w-3xl px-6 py-10">
       <Link
         href="/"
-        className="mb-6 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+        className="mb-6 inline-flex items-center gap-2 border border-primary px-4 py-2 text-xs tracking-[0.15em] text-primary uppercase transition-colors hover:bg-primary hover:text-primary-foreground"
       >
-        <ArrowLeft className="size-4" /> Back to rivalry
+        <ArrowLeft className="size-3" /> Back to rivalry
       </Link>
 
       <div className="mb-6 flex items-center justify-between gap-4">
         <div>
-          <h1 className="font-heading text-2xl font-semibold">{season.season} season</h1>
+          <h1 className="font-heading text-2xl font-semibold tracking-[0.05em] text-primary uppercase">
+            {season.season} season
+          </h1>
           <p className="text-sm text-muted-foreground">
             {season.winner
               ? `Final: ${managers.mike.name} ${season.points.mike} — ${season.points.jack} ${managers.jack.name}`
@@ -66,7 +68,7 @@ export default async function SeasonPage({
           </p>
         </div>
         {season.winner && season.winner !== "tie" && (
-          <Badge variant="secondary" className="gap-1">
+          <Badge variant="secondary" className="gap-1 uppercase tracking-[0.1em]">
             <Trophy className="size-3" />
             {managers[season.winner].name} won
           </Badge>
@@ -75,7 +77,9 @@ export default async function SeasonPage({
 
       <Card className="mb-6">
         <CardHeader>
-          <CardTitle>Cumulative points by gameweek</CardTitle>
+          <CardTitle className="text-xs tracking-[0.2em] text-muted-foreground uppercase">
+            Cumulative points by gameweek
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <SeasonChart data={chartData} managers={managers} />
@@ -85,7 +89,9 @@ export default async function SeasonPage({
       <div className="grid grid-cols-2 gap-4">
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm text-muted-foreground">Current gap</CardTitle>
+            <CardTitle className="text-xs tracking-[0.2em] text-muted-foreground uppercase">
+              Current gap
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-semibold">
@@ -103,7 +109,9 @@ export default async function SeasonPage({
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm text-muted-foreground">Lead changes</CardTitle>
+            <CardTitle className="text-xs tracking-[0.2em] text-muted-foreground uppercase">
+              Lead changes
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-2xl font-semibold">{changes}</p>
