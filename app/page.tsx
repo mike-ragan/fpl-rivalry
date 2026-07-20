@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Trophy } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   getCompletedSeasonSummaries,
@@ -45,7 +44,7 @@ export default function Home() {
         <Card className="mb-6">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Trophy className="size-4" /> Current champion
+              <Trophy className="size-4" /> Current champion 💵
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -105,9 +104,6 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Badge variant={s.source === "league" ? "secondary" : "outline"}>
-                      {s.source === "league" ? "league" : "inferred"}
-                    </Badge>
                     <span
                       className="text-sm font-medium"
                       style={{
@@ -130,11 +126,6 @@ export default function Home() {
             );
           })}
         </div>
-        <p className="mt-4 text-xs text-muted-foreground">
-          &ldquo;League&rdquo; seasons are the real mini-league result. &ldquo;Inferred&rdquo;
-          seasons (before the league existed) are reconstructed by comparing each manager&apos;s
-          overall season points total.
-        </p>
       </section>
     </main>
   );
