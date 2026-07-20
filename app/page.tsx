@@ -19,7 +19,7 @@ export default function Home() {
   const inProgress = getInProgressSeasonSlugs();
 
   return (
-    <main className="mx-auto max-w-3xl px-6 py-10">
+    <main className="mx-auto max-w-4xl px-6 py-10">
       <header className="mb-8">
         <p className="text-xs tracking-[0.2em] text-muted-foreground uppercase">
           {league.leagueName}
@@ -92,31 +92,42 @@ export default function Home() {
         <h2 className="mb-3 font-heading text-xs tracking-[0.2em] text-primary uppercase">
           Season by season
         </h2>
+        <div className="mb-2 grid grid-cols-[6rem_1fr_5rem_12rem] gap-4 px-4 text-[0.65rem] tracking-[0.15em] text-muted-foreground uppercase">
+          <span>Season</span>
+          <span>Total</span>
+          <span>Diff</span>
+          <span>Winner</span>
+        </div>
         <div className="flex flex-col gap-2">
           {seasons.map((s) => {
+            const diff = Math.abs(s.points.mike - s.points.jack);
             const row = (
               <Card
                 key={s.season}
                 className={s.slug ? "hover:ring-primary/40 transition-colors" : undefined}
               >
-                <CardContent className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <span className="w-16 text-sm font-medium">{s.season}</span>
-                    <span className="text-sm text-muted-foreground">
-                      {s.points.mike} — {s.points.jack}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span
-                      className="text-sm font-medium"
-                      style={{
-                        color:
-                          s.winner === "tie" ? undefined : MANAGER_COLOR[s.winner],
-                      }}
-                    >
-                      {s.winner === "tie" ? "Tie" : managers[s.winner].name}
-                    </span>
-                  </div>
+                <CardContent className="grid grid-cols-[6rem_1fr_5rem_12rem] items-center gap-4">
+                  <span className="text-sm font-medium">{s.season}</span>
+                  <span className="text-sm text-muted-foreground">
+                    {s.points.mike} — {s.points.jack}
+                  </span>
+                  <span
+                    className="text-sm font-medium"
+                    style={{
+                      color: s.winner === "tie" ? undefined : MANAGER_COLOR[s.winner],
+                    }}
+                  >
+                    {s.winner === "tie" ? "—" : `${diff} pt${diff === 1 ? "" : "s"}`}
+                  </span>
+                  <span
+                    className="text-sm font-medium"
+                    style={{
+                      color:
+                        s.winner === "tie" ? undefined : MANAGER_COLOR[s.winner],
+                    }}
+                  >
+                    {s.winner === "tie" ? "Tie" : managers[s.winner].name}
+                  </span>
                 </CardContent>
               </Card>
             );

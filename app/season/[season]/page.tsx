@@ -48,7 +48,7 @@ export default async function SeasonPage({
         : "jack";
 
   return (
-    <main className="mx-auto max-w-3xl px-6 py-10">
+    <main className="mx-auto max-w-4xl px-6 py-10">
       <Link
         href="/"
         className="mb-6 inline-flex items-center gap-2 border border-primary px-4 py-2 text-xs tracking-[0.15em] text-primary uppercase transition-colors hover:bg-primary hover:text-primary-foreground"
