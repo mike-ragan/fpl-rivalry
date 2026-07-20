@@ -40,11 +40,13 @@ const MANAGERS: Managers = {
   mike: {
     entryId: 562621,
     name: "Mike Ragan Wolfe",
+    initials: "MJRW",
     teamName: "TadicYouCantScratch",
   },
   jack: {
     entryId: 1446347,
     name: "Jack Dunwell",
+    initials: "JD",
     teamName: "Rambags",
   },
 };

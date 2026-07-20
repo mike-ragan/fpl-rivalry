@@ -3,6 +3,7 @@ export type ManagerKey = "mike" | "jack";
 export interface ManagerInfo {
   entryId: number;
   name: string;
+  initials: string;
   teamName: string;
 }
 

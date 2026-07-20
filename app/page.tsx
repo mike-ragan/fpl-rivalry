@@ -92,7 +92,7 @@ export default function Home() {
         <h2 className="mb-3 font-heading text-xs tracking-[0.2em] text-primary uppercase">
           Season by season
         </h2>
-        <div className="mb-2 grid grid-cols-[6rem_1fr_5rem_12rem] gap-4 px-4 text-[0.65rem] tracking-[0.15em] text-muted-foreground uppercase">
+        <div className="mb-2 grid grid-cols-[6rem_1fr_5rem_5rem] gap-4 px-4 text-[0.65rem] tracking-[0.15em] text-muted-foreground uppercase">
           <span>Season</span>
           <span>Total</span>
           <span>Diff</span>
@@ -106,7 +106,7 @@ export default function Home() {
                 key={s.season}
                 className={s.slug ? "hover:ring-primary/40 transition-colors" : undefined}
               >
-                <CardContent className="grid grid-cols-[6rem_1fr_5rem_12rem] items-center gap-4">
+                <CardContent className="grid grid-cols-[6rem_1fr_5rem_5rem] items-center gap-4">
                   <span className="text-sm font-medium">{s.season}</span>
                   <span className="text-sm text-muted-foreground">
                     {s.points.mike} — {s.points.jack}
@@ -126,7 +126,7 @@ export default function Home() {
                         s.winner === "tie" ? undefined : MANAGER_COLOR[s.winner],
                     }}
                   >
-                    {s.winner === "tie" ? "Tie" : managers[s.winner].name}
+                    {s.winner === "tie" ? "Tie" : managers[s.winner].initials}
                   </span>
                 </CardContent>
               </Card>
