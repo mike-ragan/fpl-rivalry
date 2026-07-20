@@ -1,0 +1,101 @@
+[
+  {
+    "season": "2014/15",
+    "points": {
+      "mike": 1902,
+      "jack": 1997
+    },
+    "winner": "jack",
+    "source": "inferred"
+  },
+  {
+    "season": "2015/16",
+    "points": {
+      "mike": 1972,
+      "jack": 2076
+    },
+    "winner": "jack",
+    "source": "inferred"
+  },
+  {
+    "season": "2016/17",
+    "points": {
+      "mike": 1889,
+      "jack": 1962
+    },
+    "winner": "jack",
+    "source": "inferred"
+  },
+  {
+    "season": "2017/18",
+    "points": {
+      "mike": 2011,
+      "jack": 2122
+    },
+    "winner": "jack",
+    "source": "inferred"
+  },
+  {
+    "season": "2018/19",
+    "points": {
+      "mike": 2154,
+      "jack": 2160
+    },
+    "winner": "jack",
+    "source": "inferred"
+  },
+  {
+    "season": "2019/20",
+    "points": {
+      "mike": 2153,
+      "jack": 2034
+    },
+    "winner": "mike",
+    "source": "inferred"
+  },
+  {
+    "season": "2020/21",
+    "points": {
+      "mike": 2248,
+      "jack": 2224
+    },
+    "winner": "mike",
+    "source": "inferred"
+  },
+  {
+    "season": "2021/22",
+    "points": {
+      "mike": 2237,
+      "jack": 2179
+    },
+    "winner": "mike",
+    "source": "inferred"
+  },
+  {
+    "season": "2022/23",
+    "points": {
+      "mike": 2230,
+      "jack": 2394
+    },
+    "winner": "jack",
+    "source": "inferred"
+  },
+  {
+    "season": "2023/24",
+    "points": {
+      "mike": 2386,
+      "jack": 2367
+    },
+    "winner": "mike",
+    "source": "inferred"
+  },
+  {
+    "season": "2024/25",
+    "points": {
+      "mike": 2329,
+      "jack": 2284
+    },
+    "winner": "mike",
+    "source": "inferred"
+  }
+]
