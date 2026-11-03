@@ -2,8 +2,8 @@
   "season": "2025/26",
   "source": "league",
   "points": {
-    "mike": 552,
-    "jack": 444
+    "mike": 596,
+    "jack": 490
   },
   "gameweeks": {
     "mike": [
@@ -54,6 +54,12 @@
         "points": 44,
         "totalPoints": 552,
         "rank": 6024302
+      },
+      {
+        "event": 9,
+        "points": 44,
+        "totalPoints": 596,
+        "rank": 6763571
       }
     ],
     "jack": [
@@ -104,6 +110,12 @@
         "points": 51,
         "totalPoints": 444,
         "rank": 3281445
+      },
+      {
+        "event": 9,
+        "points": 46,
+        "totalPoints": 490,
+        "rank": 5779256
       }
     ]
   }
